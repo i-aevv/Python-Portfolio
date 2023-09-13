@@ -1,1 +1,42 @@
+import math
 
+# Función para calcular el área de un triángulo
+def area_triangulo(base, altura):
+    return 0.5 * base * altura
+
+# Función para calcular el área de un círculo
+def area_circulo(radio):
+    return math.pi * radio**2
+
+# Función para calcular el área de un rectángulo
+def area_rectangulo(base, altura):
+    return base * altura
+
+# Función principal
+def main():
+    print("Calculadora de Áreas")
+    print("1. Triángulo")
+    print("2. Círculo")
+    print("3. Rectángulo")
+    
+    opcion = input("Selecciona una opción (1/2/3): ")
+    
+    if opcion == "1":
+        base = float(input("Ingresa la base del triángulo: "))
+        altura = float(input("Ingresa la altura del triángulo: "))
+        area = area_triangulo(base, altura)
+        print(f"El área del triángulo es: {area}")
+    elif opcion == "2":
+        radio = float(input("Ingresa el radio del círculo: "))
+        area = area_circulo(radio)
+        print(f"El área del círculo es: {area}")
+    elif opcion == "3":
+        base = float(input("Ingresa la base del rectángulo: "))
+        altura = float(input("Ingresa la altura del rectángulo: "))
+        area = area_rectangulo(base, altura)
+        print(f"El área del rectángulo es: {area}")
+    else:
+        print("Opción no válida. Por favor, selecciona 1, 2 o 3.")
+
+if __name__ == "__main__":
+    main()
